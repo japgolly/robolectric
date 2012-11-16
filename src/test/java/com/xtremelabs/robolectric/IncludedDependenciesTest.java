@@ -1,6 +1,7 @@
 package com.xtremelabs.robolectric;
 
 import org.json.JSONObject;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.xmlpull.v1.XmlPullParser;
@@ -10,6 +11,7 @@ import java.io.StringReader;
 
 import static org.junit.Assert.assertEquals;
 
+@Ignore
 @RunWith(WithTestDefaultsRunner.class)
 public class IncludedDependenciesTest {
     @Test

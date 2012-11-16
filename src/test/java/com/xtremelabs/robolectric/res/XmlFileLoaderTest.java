@@ -42,6 +42,7 @@ import com.xtremelabs.robolectric.res.XmlFileLoader.XmlResourceParserImpl;
  * 
  * @author msama (michele@swiftkey.net)
  */
+@Ignore
 public class XmlFileLoaderTest {
 	
 	private XmlFileLoader xmlFileLoader;
