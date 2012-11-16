@@ -74,7 +74,7 @@ import java.util.List;
 
 public class Robolectric {
     public static Application application;
-    public static final int DEFAULT_SDK_VERSION = 16;
+    public static final int DEFAULT_SDK_VERSION = 15;
 
     public static <T> T newInstanceOf(Class<T> clazz) {
         return RobolectricInternals.newInstanceOf(clazz);
@@ -213,7 +213,7 @@ public class Robolectric {
                 ShadowFrameLayout.class,
                 ShadowGallery.class,
                 ShadowGeocoder.class,
-                ShadowGeoPoint.class,
+//                ShadowGeoPoint.class,
                 ShadowGestureDetector.class,
                 ShadowGridView.class,
                 ShadowHandler.class,
@@ -226,7 +226,7 @@ public class Robolectric {
                 ShadowIntent.class,
                 ShadowIntentFilter.class,
                 ShadowIntentFilterAuthorityEntry.class,
-                ShadowItemizedOverlay.class,
+//                ShadowItemizedOverlay.class,
                 ShadowLayoutAnimationController.class,
                 ShadowJsPromptResult.class,
                 ShadowJsResult.class,
@@ -247,9 +247,9 @@ public class Robolectric {
                 ShadowLocationManager.class,
                 ShadowLog.class,
                 ShadowLooper.class,
-                ShadowMapController.class,
-                ShadowMapActivity.class,
-                ShadowMapView.class,
+//                ShadowMapController.class,
+//                ShadowMapActivity.class,
+//                ShadowMapView.class,
                 ShadowMarginLayoutParams.class,
                 ShadowMatrix.class,
                 ShadowMatrixCursor.class,
@@ -268,7 +268,7 @@ public class Robolectric {
                 ShadowNfcAdapter.class,
                 ShadowNotificationManager.class,
                 ShadowNetworkInfo.class,
-                ShadowOverlayItem.class,
+//                ShadowOverlayItem.class,
                 ShadowObjectAnimator.class,
                 ShadowPagerAdapter.class,
                 ShadowPaint.class,

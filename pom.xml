@@ -74,26 +74,25 @@
             <version>4.0.3</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.google.android</groupId>
-            <artifactId>android</artifactId>
-            <version>4.1.1.4</version>
-            <!-- <version>4.0.1.2</version> -->
-            <scope>provided</scope>
-        </dependency>
+		<dependency>
+			<groupId>android</groupId>
+			<artifactId>android</artifactId>
+			<version>4.0.3_r3</version>
+			<scope>provided</scope>
+		</dependency>
 
-        <dependency>
+        <!-- dependency>
             <groupId>com.google.android.maps</groupId>
             <artifactId>maps</artifactId>
             <version>10_r2</version>
             <scope>provided</scope>
-        </dependency>
+        </dependency-->
 
-        <dependency>
-            <groupId>com.google.android</groupId>
-            <artifactId>support-v4</artifactId>
-            <version>r6</version>
-        </dependency>
+		<dependency>
+			<groupId>android.support</groupId>
+			<artifactId>compatibility-v4</artifactId>
+			<version>11</version>
+		</dependency>
 
         <dependency>
             <groupId>org.mockito</groupId>

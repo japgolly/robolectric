@@ -22,7 +22,7 @@
 
          -->
     <!-- this should match whatever is defined in Robolectic.DEFAULT_SDK_VERSION -->
-    <property name="default.sdk.version" value="16"/>
+    <property name="default.sdk.version" value="15"/>
 
     <property file="build.properties"/>
     <!-- The default.properties file is created and updated by the 'android' tool, as well

@@ -2,7 +2,6 @@ package com.xtremelabs.robolectric.bytecode;
 
 import static com.xtremelabs.robolectric.Robolectric.directlyOn;
 import static com.xtremelabs.robolectric.Robolectric.directlyOnFullStack;
-import static com.xtremelabs.robolectric.RobolectricForMaps.shadowOf;
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.core.StringContains.containsString;
 import static org.hamcrest.core.StringStartsWith.startsWith;
@@ -23,8 +22,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import com.google.android.maps.ItemizedOverlay;
-import com.google.android.maps.OverlayItem;
 import com.xtremelabs.robolectric.Robolectric;
 import com.xtremelabs.robolectric.WithTestDefaultsRunner;
 import com.xtremelabs.robolectric.bytecode.foo.Foo2;
@@ -32,7 +29,6 @@ import com.xtremelabs.robolectric.bytecode.foo.ShadowFoo2;
 import com.xtremelabs.robolectric.internal.Implementation;
 import com.xtremelabs.robolectric.internal.Implements;
 import com.xtremelabs.robolectric.internal.Instrument;
-import com.xtremelabs.robolectric.shadows.ShadowItemizedOverlay;
 
 @RunWith(WithTestDefaultsRunner.class)
 public class AndroidTranslatorTest {
@@ -47,15 +43,15 @@ public class AndroidTranslatorTest {
         assertThat(ShadowAccountManagerForTests.context, sameInstance(context));
     }
 
-    @Test
-    public void testProtectedMethodsAreDelegated() throws Exception {
-        Robolectric.bindShadowClass(ShadowItemizedOverlay.class);
-
-        ItemizedOverlayForTests overlay = new ItemizedOverlayForTests(null);
-        overlay.triggerProtectedCall();
-
-        assertThat(shadowOf(overlay).isPopulated(), is(true));
-    }
+//    @Test
+//    public void testProtectedMethodsAreDelegated() throws Exception {
+//        Robolectric.bindShadowClass(ShadowItemizedOverlay.class);
+//
+//        ItemizedOverlayForTests overlay = new ItemizedOverlayForTests(null);
+//        overlay.triggerProtectedCall();
+//
+//        assertThat(shadowOf(overlay).isPopulated(), is(true));
+//    }
 
     @Test
     public void testNativeMethodsAreDelegated() throws Exception {
@@ -302,26 +298,26 @@ public class AndroidTranslatorTest {
         assertEquals(view, view);
     }
 
-    @Implements(ItemizedOverlay.class)
-    public static class ItemizedOverlayForTests extends ItemizedOverlay {
-        public ItemizedOverlayForTests(Drawable drawable) {
-            super(drawable);
-        }
-
-        @Override
-        protected OverlayItem createItem(int i) {
-            return null;
-        }
-
-        public void triggerProtectedCall() {
-            populate();
-        }
-
-        @Override
-        public int size() {
-            return 0;
-        }
-    }
+//    @Implements(ItemizedOverlay.class)
+//    public static class ItemizedOverlayForTests extends ItemizedOverlay {
+//        public ItemizedOverlayForTests(Drawable drawable) {
+//            super(drawable);
+//        }
+//
+//        @Override
+//        protected OverlayItem createItem(int i) {
+//            return null;
+//        }
+//
+//        public void triggerProtectedCall() {
+//            populate();
+//        }
+//
+//        @Override
+//        public int size() {
+//            return 0;
+//        }
+//    }
 
     @Implements(Paint.class)
     public static class ShadowPaintForTests {
