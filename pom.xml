@@ -10,11 +10,18 @@
 
     <groupId>com.pivotallabs</groupId>
     <artifactId>robolectric</artifactId>
-    <version>1.2-golly-SNAPSHOT</version>
+    <version>1.2-golly.1</version>
     <packaging>jar</packaging>
     <name>Robolectric</name>
     <description>An alternative Android testing framework.</description>
     <url>http://pivotal.github.com/robolectric/</url>
+
+	<distributionManagement>
+		<repository>
+			<id>thirdparty</id>
+			<url>http://golly-svr1:8081/nexus/content/repositories/thirdparty</url>
+		</repository>
+	</distributionManagement>
 
     <dependencies>
         <dependency>
