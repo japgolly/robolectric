@@ -23,11 +23,11 @@ public class HandlerThreadTest {
 		// Try to ensure we've exited the thread at the end of each test
 		if ( handlerThread != null ) {
 			handlerThread.quit();
-			handlerThread.join();
+			handlerThread.join(1000);
 		}
 	}
 
-    @Test
+    @Test(timeout = 1000)
     public void shouldReturnLooper() throws Exception {
         handlerThread = new HandlerThread("test");
         handlerThread.start();
@@ -35,13 +35,13 @@ public class HandlerThreadTest {
         assertNotSame(handlerThread.getLooper(), Robolectric.application.getMainLooper());
     }
 
-    @Test
+    @Test(timeout = 1000)
     public void shouldReturnNullIfThreadHasNotBeenStarted() throws Exception {
         handlerThread = new HandlerThread("test");
         assertNull(handlerThread.getLooper());
     }
 
-    @Test
+    @Test(timeout = 1000)
     public void shouldQuitLooperAndThread() throws Exception {
         handlerThread = new HandlerThread("test");
         handlerThread.start();
@@ -52,7 +52,7 @@ public class HandlerThreadTest {
         handlerThread = null;
     }
 
-    @Test
+    @Test(timeout = 1000)
     public void shouldStopThreadIfLooperIsQuit() throws Exception {
         handlerThread = new HandlerThread("test1");
         handlerThread.start();
@@ -65,7 +65,7 @@ public class HandlerThreadTest {
         handlerThread = null;
     }
 
-    @Test
+    @Test(timeout = 1000)
     public void shouldCallOnLooperPrepared() throws Exception {
         final Boolean[] wasCalled = new Boolean[] { false };
         handlerThread = new HandlerThread("test") {
