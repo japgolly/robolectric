@@ -2,26 +2,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+	<groupId>com.github.japgolly.android.test</groupId>
+    <artifactId>robolectric</artifactId>
+    <version>1.2-7-SNAPSHOT</version>
+
+    <name>Robolectric</name>
+    <description>An alternative Android testing framework.</description>
     <parent>
         <groupId>org.sonatype.oss</groupId>
         <artifactId>oss-parent</artifactId>
-        <version>5</version>
+        <version>7</version>
     </parent>
-
-    <groupId>com.pivotallabs</groupId>
-    <artifactId>robolectric</artifactId>
-    <version>1.2-golly.8-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>Robolectric</name>
-    <description>An alternative Android testing framework.</description>
-    <url>http://pivotal.github.com/robolectric/</url>
 
-	<distributionManagement>
-		<repository>
-			<id>thirdparty</id>
-			<url>http://golly-svr1:8081/nexus/content/repositories/thirdparty</url>
-		</repository>
-	</distributionManagement>
+	<url>https://github.com/japgolly/robolectric</url>
+	<scm>
+		<url>https://github.com/japgolly/robolectric</url>
+		<connection>scm:git:git://github.com/japgolly/robolectric.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/japgolly/robolectric.git</developerConnection>
+	</scm>
 
     <dependencies>
         <dependency>
@@ -241,54 +240,6 @@
             </build>
         </profile>
     </profiles>
-
-    <scm>
-        <url>git@github.com:pivotal/robolectric.git</url>
-        <connection>scm:git:git://github.com/pivotal/robolectric.git</connection>
-        <developerConnection>scm:git:git@github.com:pivotal/robolectric.git</developerConnection>
-    </scm>
-
-    <ciManagement>
-        <system>Hudson</system>
-        <url>http://ci.robolectric.org/job/robolectric</url>
-    </ciManagement>
-
-    <developers>
-        <developer>
-            <id>xian</id>
-            <name>Christian Williams</name>
-            <email>xian@pivotallabs.com</email>
-            <organization>Pivotal Labs</organization>
-            <organizationUrl>http://pivotallabs.com/</organizationUrl>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>PST/PDT</timezone>
-        </developer>
-        <developer>
-            <id>tyler</id>
-            <name>Tyler Schultz</name>
-            <email>tyler@pivotallabs.com</email>
-            <organization>Pivotal Labs</organization>
-            <organizationUrl>http://pivotallabs.com/</organizationUrl>
-            <roles>
-                <role>Project Owner</role>
-                <role>Developer</role>
-            </roles>
-            <timezone>PST/PDT</timezone>
-        </developer>
-        <developer>
-            <id>phil</id>
-            <name>Phil Goodwin</name>
-            <email>phil@pivotallabs.com</email>
-            <organization>Pivotal Labs</organization>
-            <organizationUrl>http://pivotallabs.com/</organizationUrl>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>PST/PDT</timezone>
-        </developer>
-    </developers>
 
     <mailingLists>
         <mailingList>
