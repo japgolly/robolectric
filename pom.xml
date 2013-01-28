@@ -4,7 +4,7 @@
 
 	<groupId>com.github.japgolly.android.test</groupId>
     <artifactId>robolectric</artifactId>
-    <version>1.2-8.1-SNAPSHOT</version>
+    <version>1.2-8.1</version>
 
     <name>Robolectric</name>
     <description>An alternative Android testing framework.</description>
