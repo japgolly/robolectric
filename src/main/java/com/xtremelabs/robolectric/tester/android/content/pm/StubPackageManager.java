@@ -295,4 +295,9 @@ public class StubPackageManager extends PackageManager {
 
 	@Override public void setInstallerPackageName(String targetPackage, String installerPackageName) {
 	}
+
+	@Override
+	public void extendVerificationTimeout(int id,
+			int verificationCodeAtTimeout, long millisecondsToDelay) {
+	}
 }
